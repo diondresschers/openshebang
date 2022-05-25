@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% if title %}
+    <title> {{ title }} - OpenSheBang</title>
+    {% else %}
+    <title>Welcome to OpenSheBang!</title>
+    {% endif %}
+
+</head>
+<body>
+    <nav>OpenSheBang <a href="/index">Home</a></nav>
+    {% block content %} <!-- you can choose any name for 'content' -->
+    {% endblock content %} <!-- it is nicer to also specifiy the 'content' here, so it is clear to which block it belongs -->
+</body>
+</html>

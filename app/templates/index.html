@@ -1,0 +1,14 @@
+{% extends 'base.html'%}
+
+{% block content %}
+    
+<h1>Hi, {{ user.username }} </h1> <!-- The 'user' is a dictionary -->
+{% for post in posts %} <!-- The first 'post' you can pick for yourself, the second 'posts' is injected by the routes.py file -->
+<div>
+    <p>
+        {{ post.author.username }} says: <b>{{ post.body }}</b> <!-- you can access the components via the '.' dot -->
+    </p>
+</div>
+    {% endfor %}
+
+{% endblock content %}
